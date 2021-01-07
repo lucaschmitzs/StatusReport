@@ -18,3 +18,11 @@ class GmudDisplay(admin.ModelAdmin):
     list_per_page = 20
 
 admin.site.register(Gmud, GmudDisplay)
+
+
+class TicketsImpactoDisplay(admin.ModelAdmin):
+	list_display = ('id', 'descricao', 'diagnostico', 'jira', 'data_hora_inicio', 'data_hora_fim', 'solucionador', 'responsavel', 'operacao', 'site')
+	list_display_links = ('id', 'jira')
+	search_fields = ('id', 'jira', 'solucionador', 'responsavel', 'operacao', 'site')
+
+admin.site.register(TicketsImpacto, TicketsImpactoDisplay)

@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('projetos_entregas', models.CharField(max_length=255)),
-                ('observacoes', models.CharField(max_length=255)),
+                ('observacoes', models.TextField(max_length=255)),
                 ('data_inicio', models.DateField(max_length=10)),
                 ('data_fim', models.DateField(max_length=10)),
                 ('responsavel', models.CharField(max_length=50)),
