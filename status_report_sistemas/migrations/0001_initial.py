@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('data', models.DateField(max_length=10)),
                 ('tipo', models.CharField(max_length=255)),
                 ('numero', models.CharField(max_length=50)),
-                ('descricao', models.CharField(max_length=255)),
+                ('descricao', models.TextField(max_length=255)),
                 ('ticket', models.CharField(max_length=50)),
                 ('area', models.CharField(max_length=100)),
                 ('site', models.CharField(max_length=100)),
@@ -45,7 +45,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('descricao', models.CharField(max_length=255)),
-                ('diagnostico', models.CharField(max_length=255)),
+                ('diagnostico', models.TextField(max_length=255)),
                 ('jira', models.CharField(max_length=50)),
                 ('data_hora_inicio', models.DateTimeField(max_length=50)),
                 ('data_hora_fim', models.DateTimeField(max_length=50)),

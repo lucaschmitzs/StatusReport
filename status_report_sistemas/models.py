@@ -18,7 +18,7 @@ class Gmud(models.Model):
     data = models.DateField(max_length=10, blank=False, null=False)
     tipo = models.CharField(max_length=255, blank=False, null=False)
     numero = models.CharField(max_length=50, blank=False, null=False)
-    descricao = models.CharField(max_length=255, blank=False, null=False)
+    descricao = models.TextField(max_length=255, blank=False, null=False)
     ticket = models.CharField(max_length=50, blank=False, null=False)
     area = models.CharField(max_length=100, blank=False, null=False)
     site = models.CharField(max_length=100, blank=False, null=False)
@@ -35,7 +35,7 @@ class Gmud(models.Model):
 class TicketsImpacto(models.Model):
     objects = models.Manager()
     descricao = models.CharField(max_length=255, blank=False, null=False)
-    diagnostico = models.CharField(max_length=255, blank=False, null=False)
+    diagnostico = models.TextField(max_length=255, blank=False, null=False)
     jira = models.CharField(max_length=50, blank=False, null=False)
     data_hora_inicio = models.DateTimeField(max_length=50, blank=False, null=False)
     data_hora_fim = models.DateTimeField(max_length=50, blank=False, null=False)
