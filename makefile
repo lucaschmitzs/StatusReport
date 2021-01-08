@@ -2,7 +2,16 @@
 .DEFAULT_GOAL: test
 
 venv:
-	virtualenv -p /usr/bin/python3.6 .venv
+	python3 -m venv .venv
+
+venv-win:
+	python -m venv .venv
+
+venv-activate-win:
+	.venv\Scripts\activate.bat
+
+venv-activate:
+	source .venv/bin/activate
 
 init:
 	pip install -r requirements.txt
